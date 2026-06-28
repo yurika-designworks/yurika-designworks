@@ -177,6 +177,58 @@
     overflow: hidden;
     position: relative;
   }
+
+  /* Browser-style mockup frame for web works */
+  .work-thumb.is-web {
+    background: #E5DDD6;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 0;
+  }
+  .browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 6px 8px;
+    flex-shrink: 0;
+  }
+  .browser-bar span {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #C9B8B0;
+    display: inline-block;
+  }
+  .browser-screen {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    background: #fff;
+  }
+  .browser-screen img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* Print mockup frame for flyers/posters */
+  .work-thumb.is-print {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+  }
+  .print-paper {
+    height: 100%;
+    box-shadow: 0 10px 28px rgba(61,43,43,0.22), 0 2px 6px rgba(61,43,43,0.12);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .print-paper img {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: cover;
+  }
   .work-thumb-inner {
     width: 100%; height: 100%;
     display: flex; align-items: center; justify-content: center;
@@ -319,28 +371,42 @@
   <div class="works-grid">
 
     <a href="#" class="work-card">
-      <div class="work-thumb"><img src="images/work-cafe.png" alt="Eclat Cafe LP" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#FDF8F5;"></div>
+      <div class="work-thumb is-web">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <div class="browser-screen"><img src="images/work-cafe.png" alt="Eclat Cafe LP"></div>
+      </div>
       <div class="work-info"><p class="work-cat">Web Design</p><p class="work-title">Eclat Café — カフェLP</p></div>
     </a>
 
     <a href="#" class="work-card">
-      <div class="work-thumb"><img src="images/work-matching.png" alt="Happsta LP" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#FDF8F5;"></div>
+      <div class="work-thumb is-web">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <div class="browser-screen"><img src="images/work-matching.png" alt="Happsta LP"></div>
+      </div>
       <div class="work-info"><p class="work-cat">Web Design</p><p class="work-title">Happsta — マッチングLP</p></div>
     </a>
 
     <a href="#" class="work-card">
-      <div class="work-thumb"><img src="images/work-gym.png" alt="BE-BODY LP" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#FDF8F5;"></div>
+      <div class="work-thumb is-web">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <div class="browser-screen"><img src="images/work-gym.png" alt="BE-BODY LP"></div>
+      </div>
       <div class="work-info"><p class="work-cat">Web Design</p><p class="work-title">BE-BODY — ジムLP</p></div>
     </a>
 
     <a href="#" class="work-card">
-      <div class="work-thumb"><img src="images/work-melonpan.png" alt="Treasury LP" style="width:100%;height:100%;object-fit:contain;object-position:center;background:#FDF8F5;"></div>
+      <div class="work-thumb is-web">
+        <div class="browser-bar"><span></span><span></span><span></span></div>
+        <div class="browser-screen"><img src="images/work-melonpan.png" alt="Treasury LP"></div>
+      </div>
       <div class="work-info"><p class="work-cat">Web Design</p><p class="work-title">Treasury — メロンパン専門店LP</p></div>
     </a>
 
     <a href="#" class="work-card">
-      <div class="work-thumb"><div class="work-thumb-inner p5">05</div></div>
-      <div class="work-info"><p class="work-cat">Branding</p><p class="work-title">作品タイトルをここに入力</p></div>
+      <div class="work-thumb is-print">
+        <div class="print-paper"><img src="images/work-xmascake.png" alt="Christmas Cake Flyer"></div>
+      </div>
+      <div class="work-info"><p class="work-cat">Print</p><p class="work-title">Christmas Cake — チラシ</p></div>
     </a>
 
     <a href="#" class="work-card">
